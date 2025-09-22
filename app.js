@@ -10,3 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+function adicionarAmigo() {
+  const input = document.getElementById('amigo');
+  const nome = input.value.trim();
+
+  if (nome === '') {
+    alert('Por favor, insira um nome.');
+    return;
+  }
+
+  amigos.push(nome);
+  input.value = '';
+  atualizarLista();
+}
